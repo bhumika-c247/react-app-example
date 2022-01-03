@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-class Test extends Component {
+class ClassComponent extends Component {
   constructor(props) {
+    console.log('inside conssssssss');
     super(props);
     this.state = {
       count: 0,
@@ -23,6 +24,7 @@ class Test extends Component {
   };
 
   render() {
+    console.log('test---');
     const { count } = this.state;
     return (
       <div>
@@ -38,4 +40,4 @@ class Test extends Component {
     );
   }
 }
-export default Test;
+export default ClassComponent;

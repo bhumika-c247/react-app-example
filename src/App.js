@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Test from './ClassComponent';
+import ClassComponent from './ClassComponent';
 import FunctionalComponent from './FunctionalComponent';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 function App() {
@@ -20,8 +20,8 @@ function App() {
           </nav>
 
           <Switch>
-            <Route path='/class/:id'>
-              <Test />
+            <Route path='/class'>
+              <ClassComponent />
             </Route>
             <Route path='/functional'>
               <FunctionalComponent />
