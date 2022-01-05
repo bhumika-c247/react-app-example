@@ -1,6 +1,13 @@
 import { useState } from 'react';
+import { useHistory, useParams, useLocation } from 'react-router-dom';
 
 const FunctionalComponent = () => {
+  const history = useHistory();
+  const params = useParams();
+  const location = useLocation();
+  console.log('params-----', params);
+  console.log('location-----', location);
+  console.log('history-----', history);
   const [count, setCount] = useState(0);
   const increaseCount = () => {
     setCount(count + 1);

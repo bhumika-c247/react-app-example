@@ -3,7 +3,8 @@ import './App.css';
 import ClassComponent from './ClassComponent';
 import FunctionalComponent from './FunctionalComponent';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+const App = () => {
   return (
     <>
       <Router>
@@ -20,17 +21,20 @@ function App() {
           </nav>
 
           <Switch>
-            <Route path='/class'>
-              <ClassComponent />
+            {/* url params */}
+            <Route path='/class' component={ClassComponent}>
+              {/* <ClassComponent {...props} /> */}
             </Route>
-            <Route path='/functional'>
-              <FunctionalComponent />
+            {/* query params */}
+            <Route path='/functional' component={FunctionalComponent}>
+              {/* /functional?id=1&name=bhumika */}
+              {/* <FunctionalComponent {...props} /> */}
             </Route>
           </Switch>
         </div>
       </Router>
     </>
   );
-}
+};
 
 export default App;
