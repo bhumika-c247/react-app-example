@@ -4,7 +4,9 @@ import ClassComponent from './ClassComponent';
 import FunctionalComponent from './FunctionalComponent';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 const App = () => {
+  axios.defaults.baseURL = 'https://fakestoreapi.com';
   return (
     <>
       <Router>
